@@ -1,41 +1,109 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
+let maxNum = ""
 
+if (num1 > num2){
+  return num1;
+} if (num2 > num1) {
+  return num2;
+} else {
+  return num1;
+}
+}
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(array) {
 
+  if(array.length === 0) {
+    return null;
+  }
 
+  let longWord = '';
+
+  array.forEach(function(arrItem){
+    if(arrItem.length > longWord.length) {
+      longWord = arrItem;
+    }
+  });
+
+  return longWord;
+}
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arraySum) {
+  let sum = 0;
 
+  if(arraySum.length === sum) {
+    return 0;
+  } else {
+    for(let i = 0; i < arraySum.length; i++) {
+      sum += arraySum[i];
+    }
+    return sum;
+  }
 
+}
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arrayTypes) {
 
+  if (arrayTypes === 0){
+    return 0;
+  } 
+
+  let sum = 0;
+
+  arrayTypes.forEach(element => {
+
+    if (typeof element === "object") {
+      throw new Error("Unsupported data type sir or ma'am");
+    } else if (typeof element === "string"){
+      sum += element.length;
+    } else if (typeof element === "number"){
+      sum += element;
+    } else if (typeof element === "number" || "string" || "bolean"){
+      sum += element;
+    } 
+  });
+
+  return sum;
+
+  }
 
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arrayAvg) {
 
+  if(arrayAvg.length === 0) {
+    return null;
+  } else {
+  return sumNumbers(arrayAvg) / (arrayAvg.length)}
+
+}
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(array) {
+    if (!array.length) {
+        return null;
+    }
+  
+  return sum(array) / array.length;
+  }
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(array) {
+  return averageWordLength(array);
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -56,7 +124,7 @@ function uniquifyArray() {}
 
 
 
-// Iteration #6: Find elements
+// Iteration #6: Find arrItems
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist() {}
