@@ -1,14 +1,12 @@
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers(num1, num2) {
-let maxNum = ""
 
 if (num1 > num2){
   return num1;
-} if (num2 > num1) {
-  return num2;
 } else {
-  return num1;
+  return num2;
 }
+
 }
 
 
@@ -120,14 +118,42 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsArray) {
+  if (wordsArray.length === 0) {
+  return null;
+  };
 
+  let newArray = [];
+
+  wordsArray.forEach(function (item){
+      if (!newArray.includes(item)){
+        newArray.push(item);
+      }
+    });
+
+    return newArray;
+}
 
 
 // Iteration #6: Find arrItems
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(array, wordSearching) {
+  if (array.length === 0) {
+    return null;
+  };
+
+  let finder = false;
+
+  array.forEach(element => {
+    if (element === wordSearching) {
+      finder = true;
+    }
+  });
+
+  return finder;
+
+}
 
 
 
@@ -146,9 +172,23 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(word, wordSearching) {
 
+  if (word.length === 0) {
+    return 0;
+  }
 
+  counter = 0;
+
+  word.forEach(element => {
+    if (element === wordSearching) {
+      counter++;
+    }
+  });
+
+  return counter;
+
+}
 
 // Iteration #8: Bonus
 const matrix = [
